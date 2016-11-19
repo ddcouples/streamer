@@ -1,1 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="imgMouseoverEfficiency.js"></script>
+    <style>
+        *{
+           margin:0;
+           padding:0;
+        }
+        body {
+            background: #333;
+            background-image: url(img/ValleyofYzer_ZH-CN8001552912_1920x1080.jpg);
+            background-size:auto;
+            background-repeat:no-repeat;
+            height:100%;
+        }
+        .bgimage {
+            margin: 0 auto;
+        }
+         .imageDiv {
+            display:inline-block;
+           left:600px;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+            .imageDiv:hover .right-pic {
+                left: 480px;
+                opacity: 0.8;
+            }
+        .right-pic{
+            width: 80px;
+            height:500px;
+            border:1px solid black;
+            -webkit-transition:all ease-out 5s;
+            position: absolute;
+            /*left: -200px;*/
+            left:0px;
+            top:0px;
+            background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+            /* background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%); */
+            background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+            -webkit-transform: skewX(-30deg);
+            -moz-transform: skewX(-30deg);
+            z-index:9;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            imgMouseoverEfficiency.lightStreamer(document.getElementById("imageDiv"));
+            imgMouseoverEfficiency.lightStreamer(document.getElementById("imageDiv2"));
+            imgMouseoverEfficiency.lightStreamer(document.getElementById("imageDiv3"));
+        }
+    </script>
+</head>
+<body>
+    <div class="bgimage">
+        <div  id="imageDiv">
+            <a href="#"><img src="img/banner02.jpg" /></a>
+            <!--<span class="right-pic"></span>-->
+        </div>
+        <div id="imageDiv2">
+            <a href="#"><img src="img/1.jpg" /></a>
+            <!--<span class="right-pic"></span>-->
+        </div>
+        <div id="imageDiv3">
+            <a href="#"><img src="img/banner02.jpg" /></a>
+            <!--<span class="right-pic"></span>-->
+        </div>
+    </div>
+</body>
+</html>
 
